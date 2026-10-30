@@ -1,0 +1,202 @@
+{
+    "/images/brand/mascot.webp": {
+        "w": 275,
+        "h": 304,
+        "sm": {
+            "w": 275,
+            "h": 304
+        }
+    },
+    "/images/collection/amazing-spider-man-25.webp": {
+        "w": 708,
+        "h": 880,
+        "sm": {
+            "w": 708,
+            "h": 880
+        }
+    },
+    "/images/collection/amazing-spider-man-34.webp": {
+        "w": 709,
+        "h": 891,
+        "sm": {
+            "w": 709,
+            "h": 891
+        }
+    },
+    "/images/collection/amazing-spider-man-38.webp": {
+        "w": 708,
+        "h": 847,
+        "sm": {
+            "w": 708,
+            "h": 847
+        }
+    },
+    "/images/collection/avenging-world.webp": {
+        "w": 708,
+        "h": 864,
+        "sm": {
+            "w": 708,
+            "h": 864
+        }
+    },
+    "/images/collection/mr-a.webp": {
+        "w": 835,
+        "h": 1199,
+        "sm": {
+            "w": 669,
+            "h": 960
+        }
+    },
+    "/images/collection/showcase-73.webp": {
+        "w": 708,
+        "h": 867,
+        "sm": {
+            "w": 708,
+            "h": 867
+        }
+    },
+    "/images/collection/static-11.webp": {
+        "w": 1009,
+        "h": 1600,
+        "sm": {
+            "w": 606,
+            "h": 960
+        }
+    },
+    "/images/collection/static-12.webp": {
+        "w": 1009,
+        "h": 1600,
+        "sm": {
+            "w": 606,
+            "h": 960
+        }
+    },
+    "/images/collection/the-safest-place.webp": {
+        "w": 708,
+        "h": 999,
+        "sm": {
+            "w": 680,
+            "h": 960
+        }
+    },
+    "/images/collection/wha-3.webp": {
+        "w": 1009,
+        "h": 1600,
+        "sm": {
+            "w": 606,
+            "h": 960
+        }
+    },
+    "/images/ditko/captain-atom-82.webp": {
+        "w": 1054,
+        "h": 1600,
+        "sm": {
+            "w": 632,
+            "h": 960
+        }
+    },
+    "/images/ditko/mysterious-suspense-1.webp": {
+        "w": 972,
+        "h": 1479,
+        "sm": {
+            "w": 631,
+            "h": 960
+        }
+    },
+    "/images/ditko/space-adventures-33.webp": {
+        "w": 1080,
+        "h": 1572,
+        "sm": {
+            "w": 660,
+            "h": 960
+        }
+    },
+    "/images/ditko/steve-ditko-1959.webp": {
+        "w": 820,
+        "h": 548,
+        "sm": {
+            "w": 720,
+            "h": 481
+        }
+    },
+    "/images/ditko/the-thing-12.webp": {
+        "w": 975,
+        "h": 1433,
+        "sm": {
+            "w": 653,
+            "h": 960
+        }
+    },
+    "/images/pressing/amazing-spider-man-129.webp": {
+        "w": 800,
+        "h": 800,
+        "sm": {
+            "w": 720,
+            "h": 720
+        }
+    },
+    "/images/pressing/amazing-spider-man-5.webp": {
+        "w": 800,
+        "h": 800,
+        "sm": {
+            "w": 720,
+            "h": 720
+        }
+    },
+    "/images/pressing/back-cover-ad.webp": {
+        "w": 800,
+        "h": 800,
+        "sm": {
+            "w": 720,
+            "h": 720
+        }
+    },
+    "/images/pressing/batman-adventures-12.webp": {
+        "w": 566,
+        "h": 384,
+        "sm": {
+            "w": 566,
+            "h": 384
+        }
+    },
+    "/images/pressing/daredevil-1-regrade.webp": {
+        "w": 600,
+        "h": 800,
+        "sm": {
+            "w": 600,
+            "h": 800
+        }
+    },
+    "/images/pressing/flash-139.webp": {
+        "w": 800,
+        "h": 800,
+        "sm": {
+            "w": 720,
+            "h": 720
+        }
+    },
+    "/images/pressing/green-lantern-stain.webp": {
+        "w": 800,
+        "h": 800,
+        "sm": {
+            "w": 720,
+            "h": 720
+        }
+    },
+    "/images/pressing/silver-age-corner.webp": {
+        "w": 800,
+        "h": 800,
+        "sm": {
+            "w": 720,
+            "h": 720
+        }
+    },
+    "/images/pressing/tales-of-suspense.webp": {
+        "w": 800,
+        "h": 800,
+        "sm": {
+            "w": 720,
+            "h": 720
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "framework": "vite",
+    "installCommand": "npm install",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+        { "source": "/Pressing", "destination": "/press-room", "permanent": true },
+        { "source": "/pressing", "destination": "/press-room", "permanent": true },
+        { "source": "/comic-conventions", "destination": "/conventions", "permanent": true },
+        { "source": "/order-ditko-books-here", "destination": "/ditko-books", "permanent": true },
+        { "source": "/contact-me", "destination": "/contact", "permanent": true },
+        { "source": "/the-ditko-collection", "destination": "/collection", "permanent": true },
+        { "source": "/signed", "destination": "/collection", "permanent": true },
+        { "source": "/order", "destination": "/ditko-books", "permanent": true },
+        { "source": "/books", "destination": "/ditko-books", "permanent": true },
+        { "source": "/shop", "destination": "/ditko-books", "permanent": true },
+        { "source": "/press", "destination": "/press-room", "permanent": true },
+        { "source": "/cons", "destination": "/conventions", "permanent": true },
+        { "source": "/events", "destination": "/conventions", "permanent": true },
+        { "source": "/steve-ditko", "destination": "/about", "permanent": true }
+    ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains" },
+                { "key": "X-Content-Type-Options", "value": "nosniff" },
+                { "key": "X-Frame-Options", "value": "DENY" },
+                { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+                { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=()" },
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+                }
+            ]
+        },
+        {
+            "source": "/images/(.*)",
+            "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+        },
+        {
+            "source": "/og/(.*)",
+            "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+        },
+        {
+            "source": "/assets/(.*)",
+            "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+        }
+    ]
+}

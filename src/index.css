@@ -1,0 +1,323 @@
+@import 'tailwindcss';
+
+/*
+ * Ditko Club design tokens.
+ * The palette is the club's own: the red and yellow of the ink-pot mascot on Darren's
+ * order forms (also the yellow of the CGC × JSA autograph label), the red and blue of
+ * Silver Age four-color printing, and newsprint. A little purple from Doctor Strange's
+ * dimensions, used sparingly, and CGC-hologram green for "available".
+ */
+@theme {
+    --font-display: 'Bangers', 'Impact', 'Arial Narrow Bold', sans-serif;
+    --font-sans: 'Archivo Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-letter: 'Patrick Hand SC', 'Comic Sans MS', 'Chalkboard SE', cursive;
+    --font-marker: 'Permanent Marker', 'Comic Sans MS', cursive;
+
+    --color-ink: #15110f;
+    --color-ink-soft: #3b332e;
+    --color-paper: #fbf6ea;
+    --color-newsprint: #f3e9d2;
+    --color-newsprint-dark: #e6d6b1;
+
+    --color-crimson-50: #fff1f0;
+    --color-crimson-100: #ffdfdc;
+    --color-crimson-200: #ffbcb6;
+    --color-crimson-300: #ff8b82;
+    --color-crimson-400: #f8564b;
+    --color-crimson-500: #e8312a;
+    --color-crimson-600: #c41a12;
+    --color-crimson-700: #a1150f;
+    --color-crimson-800: #7f1511;
+    --color-crimson-900: #5e110e;
+    --color-crimson-950: #340705;
+
+    --color-pow-100: #fff7d1;
+    --color-pow-200: #ffee9e;
+    --color-pow-300: #ffe266;
+    --color-pow-400: #ffd43b;
+    --color-pow-500: #f5b800;
+    --color-pow-600: #cc9200;
+
+    --color-cobalt-50: #eef3ff;
+    --color-cobalt-100: #dbe5ff;
+    --color-cobalt-200: #b9cbff;
+    --color-cobalt-300: #8aa8f5;
+    --color-cobalt-400: #5b82e6;
+    --color-cobalt-500: #3563d0;
+    --color-cobalt-600: #2449b0;
+    --color-cobalt-700: #1d3a8c;
+    --color-cobalt-800: #172d6b;
+    --color-cobalt-900: #10204d;
+    --color-cobalt-950: #0a1431;
+
+    --color-mystic-300: #d4a8ff;
+    --color-mystic-500: #8f3ad6;
+    --color-mystic-700: #521a86;
+
+    --color-go-100: #dcf5e6;
+    --color-go-500: #1f9d55;
+    --color-go-700: #146b3a;
+
+    --shadow-comic-sm: 3px 3px 0 0 var(--color-ink);
+    --shadow-comic: 6px 6px 0 0 var(--color-ink);
+    --shadow-comic-lg: 10px 10px 0 0 var(--color-ink);
+
+    --animate-marquee: marquee 55s linear infinite;
+    --animate-wiggle: wiggle 4s ease-in-out infinite;
+    --animate-float: float 7s ease-in-out infinite;
+    --animate-pop: pop 0.45s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+    --animate-spin-slow: spin 90s linear infinite;
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes wiggle {
+        0%,
+        100% {
+            transform: rotate(-4deg);
+        }
+        50% {
+            transform: rotate(4deg);
+        }
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes pop {
+        from {
+            transform: scale(0.7);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+@layer base {
+    html {
+        -webkit-text-size-adjust: 100%;
+        scroll-padding-top: 6.5rem;
+    }
+
+    body {
+        @apply bg-paper font-sans text-ink antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    ::selection {
+        @apply bg-pow-300 text-ink;
+    }
+
+    :focus-visible {
+        outline: 3px solid var(--color-cobalt-500);
+        outline-offset: 3px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-wrap: balance;
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+
+    button,
+    summary {
+        cursor: pointer;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+/* Archivo's width axis, squeezed: the narrow uppercase of a CGC label or a comic's corner box */
+@utility condensed {
+    font-stretch: 75%;
+}
+
+/* Ben-Day dots. The color comes from the element's text color: <div class="halftone text-ink/10" /> */
+@utility halftone {
+    background-image: radial-gradient(currentColor 1.4px, transparent 1.7px);
+    background-size: 10px 10px;
+}
+@utility halftone-lg {
+    background-image: radial-gradient(currentColor 3px, transparent 3.4px);
+    background-size: 18px 18px;
+}
+
+/* radiating action lines behind a hero panel */
+@utility sunburst {
+    background-image: repeating-conic-gradient(currentColor 0deg 5deg, transparent 5deg 10deg);
+}
+
+/* Doctor Strange-ish concentric rings, for the About page */
+@utility dimension {
+    background-image: repeating-radial-gradient(circle at 50% 50%, currentColor 0 2px, transparent 2px 22px);
+}
+
+/* outlined lettering with a hard drop shadow, like a cover logo */
+@utility comic-stroke {
+    -webkit-text-stroke: 0.05em var(--color-ink);
+    paint-order: stroke fill;
+    text-shadow: 0.06em 0.06em 0 var(--color-ink);
+}
+@utility comic-shadow {
+    text-shadow: 0.05em 0.05em 0 var(--color-ink);
+}
+
+/* a comic panel: a heavy rule and a hard offset shadow */
+@utility panel {
+    border: 3px solid var(--color-ink);
+    box-shadow: var(--shadow-comic);
+}
+
+@utility lift {
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    &:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: var(--shadow-comic-lg);
+    }
+}
+
+/* hides the scrollbar on horizontally scrolling rows, keeps them scrollable */
+@utility no-scrollbar {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* the torn-strip zigzag along the bottom of a band */
+@utility zigzag-bottom {
+    --zz: 14px;
+    -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / calc(2 * var(--zz)) 100%;
+    mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / calc(2 * var(--zz)) 100%;
+}
+
+@layer components {
+    /* speech balloon with a tail. .bubble-right moves the tail, .bubble-up points it at something above */
+    .bubble {
+        position: relative;
+        border: 3px solid var(--color-ink);
+        border-radius: 1.75rem;
+        background: #fff;
+    }
+    .bubble::after {
+        content: '';
+        position: absolute;
+        bottom: -14px;
+        left: 2.25rem;
+        width: 24px;
+        height: 24px;
+        border-right: 3px solid var(--color-ink);
+        border-bottom: 3px solid var(--color-ink);
+        background: inherit;
+        transform: rotate(45deg) skew(12deg, 12deg);
+    }
+    .bubble-right::after {
+        left: auto;
+        right: 2.25rem;
+    }
+    .bubble-left::after {
+        top: 50%;
+        bottom: auto;
+        left: -14px;
+        margin-top: -12px;
+        border-right: 0;
+        border-bottom: 3px solid var(--color-ink);
+        border-left: 3px solid var(--color-ink);
+    }
+
+    /* scroll reveal. hidden only when scripts run, so the page never stays blank without JS */
+    @media (scripting: enabled) {
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition:
+                opacity 0.6s ease,
+                transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition-delay: var(--reveal-delay, 0ms);
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    /* the light sweep across a slab's plastic on hover */
+    .slab-sheen {
+        position: relative;
+        overflow: hidden;
+    }
+    .slab-sheen::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(115deg, transparent 30%, rgb(255 255 255 / 0.28) 45%, transparent 60%);
+        transform: translateX(-120%);
+        transition: transform 0.7s ease;
+        pointer-events: none;
+    }
+    .group:hover .slab-sheen::after,
+    .slab-sheen:hover::after {
+        transform: translateX(120%);
+    }
+
+    .marquee-track:hover {
+        animation-play-state: paused;
+    }
+
+    /* room for the phone order bar on /ditko-books (MobileOrderBar.tsx) */
+    @media (width < 64rem) {
+        .has-order-bar body {
+            padding-bottom: 4.75rem;
+        }
+    }
+
+    .prose-legal {
+        @apply max-w-3xl text-[1.0625rem] leading-relaxed text-ink-soft;
+    }
+    .prose-legal h2 {
+        @apply mt-10 mb-3 font-display text-3xl tracking-wide text-ink;
+    }
+    .prose-legal h3 {
+        @apply mt-6 mb-2 text-lg font-bold text-ink;
+    }
+    .prose-legal p {
+        @apply mb-4;
+    }
+    .prose-legal ul {
+        @apply mb-4 list-disc space-y-1.5 pl-6 marker:text-crimson-600;
+    }
+    .prose-legal a {
+        @apply font-semibold text-crimson-700 underline decoration-crimson-200 decoration-2 underline-offset-2 hover:decoration-crimson-600;
+    }
+}

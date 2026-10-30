@@ -1,0 +1,44 @@
+{
+    "name": "ditko-club",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Website for Ditko Club (ditkoclub.com): the Ditko Collection of books signed by Steve Ditko, out-of-print Ditko and Robin Snyder books, and comic pressing. Built by GradientV.",
+    "engines": {
+        "node": ">=22.18"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "npm run typecheck && npm run build:client && npm run build:server && npm run prerender",
+        "build:client": "vite build",
+        "build:server": "vite build --ssr src/entry-server.tsx --outDir dist-server",
+        "prerender": "node scripts/prerender.ts",
+        "preview": "vite preview",
+        "typecheck": "tsc -b",
+        "lint": "oxlint",
+        "images": "node scripts/optimize-images.ts",
+        "brand": "node scripts/brand-assets.ts"
+    },
+    "dependencies": {
+        "@fontsource-variable/archivo": "^5.3.0",
+        "@fontsource/bangers": "^5.3.0",
+        "@fontsource/patrick-hand-sc": "^5.3.0",
+        "@fontsource/permanent-marker": "^5.3.0",
+        "lucide-react": "^1.64.0",
+        "react": "^19.3.1",
+        "react-dom": "^19.3.1",
+        "react-router": "^8.5.1"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.3.3",
+        "@types/node": "^24.19.2",
+        "@types/react": "^19.3.0",
+        "@types/react-dom": "^19.3.0",
+        "@vitejs/plugin-react": "^6.1.2",
+        "oxlint": "^1.90.0",
+        "sharp": "^0.35.5",
+        "tailwindcss": "^4.3.3",
+        "typescript": "~6.0.3",
+        "vite": "^8.3.5"
+    }
+}
