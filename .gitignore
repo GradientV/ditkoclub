@@ -7,7 +7,6 @@ dist-server
 images-raw/
 
 # local tooling / editor config
-.claude/
 .vercel
 
 # environment
@@ -23,8 +22,6 @@ Thumbs.db
 # Notes, research and AI agent files: kept on this computer, never pushed
 AGENTS.md
 AGENTS-TEMPLATE/
-CLAUDE.md
-CLAUDE.local.md
 RESEARCH.md
 /context/
 /Context/
