@@ -19,3 +19,12 @@ images-raw/
 .DS_Store
 Thumbs.db
 *.local
+
+# Notes, research and AI agent files: kept on this computer, never pushed
+AGENTS.md
+AGENTS-TEMPLATE/
+CLAUDE.md
+CLAUDE.local.md
+RESEARCH.md
+/context/
+/Context/
