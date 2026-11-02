@@ -1,5 +1,5 @@
 // what the yellow CGC × JSA label means, in plain words. facts from CGC's own label and
-// guarantee pages (see RESEARCH.md); no CGC or JSA logos are copied, just the label's look.
+// guarantee pages; no CGC or JSA logos are copied, just the label's look.
 import { FileSearch, PenLine, ShieldCheck, Stamp as StampIcon } from 'lucide-react';
 import { Caption } from '@/components/ui/Comic';
 

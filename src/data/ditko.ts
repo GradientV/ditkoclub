@@ -1,6 +1,6 @@
 // Steve Ditko's story for the About page. every fact here is from his Wikipedia biography
 // (checked October 2026), the CGC labels on the club's books, or the public-domain
-// covers' Wikimedia Commons records. see RESEARCH.md.
+// covers' Wikimedia Commons records.
 import type { PhotoKey } from './photos';
 
 export type TimelineEntry = {

@@ -1,6 +1,6 @@
 // everything about Ditko Club that shows up in more than one place:
 // names, contact details, payment handles, the downloadable forms, the menu.
-// change it here and every page follows. sources for each fact are in RESEARCH.md.
+// change it here and every page follows.
 
 /** the address the site lives at: canonical links, the sitemap, social previews, structured data */
 export const SITE_URL = 'https://ditkoclub.com';

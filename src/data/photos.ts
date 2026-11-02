@@ -1,7 +1,7 @@
 // every photo on the site, with its alt text in one place.
 // - collection/ and pressing/: Ditko Club's own photos, from the old ditkoclub.com
 // - brand/mascot: cut from the header art on Darren's order form
-// - ditko/: public domain, via Wikimedia Commons (credits in RESEARCH.md and the footer)
+// - ditko/: public domain, via Wikimedia Commons (credits in the footer)
 // files live in public/images; run `npm run images` after adding new ones.
 
 export type PhotoInfo = {

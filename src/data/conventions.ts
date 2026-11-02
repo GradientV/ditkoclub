@@ -1,5 +1,5 @@
 // the shows Ditko Club works, from the old Comic Conventions page.
-// venues and Empire Comic Fest's exact days were checked against each show's listings (RESEARCH.md).
+// venues and Empire Comic Fest's exact days were checked against each show's listings.
 //
 // new season: replace the list and change CONVENTIONS_YEAR. a show is marked "wrapped"
 // automatically the day after its `end` date, in the visitor's own time zone.

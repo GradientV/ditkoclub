@@ -3,7 +3,7 @@
 // grades, page quality, signatures, provenance, credits, key notes and cert numbers are
 // copied from the labels in Darren's photos. prices and SOLD/available come from the old
 // ditkoclub.com listings. the "about" paragraphs are written for this site from those
-// facts plus Ditko's documented career (see RESEARCH.md).
+// facts plus Ditko's documented career.
 //
 // selling a book: set status to 'sold'. new book: add an entry, drop the slab photo in
 // public/images/collection, run `npm run images`, and add it to src/data/photos.ts.
