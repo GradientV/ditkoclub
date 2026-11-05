@@ -10,6 +10,8 @@ import Photo from '@/components/ui/Photo';
 import { site } from '@/data/site';
 import { organizationSchema } from '@/lib/schema';
 
+//**test */
+
 function DitkoPortrait() {
     return (
         <figure className="mx-auto max-w-lg">
